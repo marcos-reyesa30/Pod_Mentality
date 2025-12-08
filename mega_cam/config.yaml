@@ -1,0 +1,180 @@
+# Project definitions (do not edit)
+Task: MEGALab
+scorer: Michael
+date: Dec6
+multianimalproject: true
+identity: false
+
+
+# Project path (change when moving around)
+project_path: C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06
+
+
+# Default DeepLabCut engine to use for shuffle creation (either pytorch or tensorflow)
+engine: pytorch
+
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish0.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish1.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish10.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish11.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish12.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish13.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish14.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish15.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish16.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish17.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish18.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish19.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish2.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish20.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish21.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish22.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish23.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish24.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish25.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish26.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish27.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish28.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish29.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish3.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish30.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish31.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish32.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish33.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish34.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish4.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish5.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish6.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish7.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish8.mp4:
+    crop: 0, 852, 0, 480
+  C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\videos\Fish9.mp4:
+    crop: 0, 852, 0, 480
+individuals:
+- fish1
+- fish2
+- fish3
+- fish4
+- fish5
+- fish6
+- fish7
+- fish8
+- fish9
+- fish10
+- fish11
+- fish12
+- fish13
+- fish14
+- fish15
+- fish16
+- fish17
+- fish18
+- fish19
+- fish20
+- fish21
+- fish22
+- fish23
+- fish24
+- fish25
+- fish26
+- fish27
+- fish28
+- fish29
+- fish30
+
+uniquebodyparts: []
+multianimalbodyparts:
+- head
+- torso
+- tail
+bodyparts: MULTI!
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+
+
+# Plotting configuration
+skeleton:
+- - bodypart1
+  - bodypart2
+- - bodypart2
+  - bodypart3
+- - bodypart1
+  - bodypart3
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: albumentations
+default_track_method: ellipse
+snapshotindex: -1
+detector_snapshotindex: -1
+batch_size: 8
+
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+
+
+# Conversion tables to fine-tune SuperAnimal weights
+SuperAnimalConversionTables:
+detector_batch_size: 1

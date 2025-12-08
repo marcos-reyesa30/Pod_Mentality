@@ -1,0 +1,14 @@
+dataset: C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06
+dataset_type: multi-animal-imgaug
+num_joints: 3
+all_joints:
+- - 0
+- - 1
+- - 2
+all_joints_names:
+- head
+- torso
+- tail
+net_type: resnet_50
+global_scale: 1
+scoremap_dir: test
