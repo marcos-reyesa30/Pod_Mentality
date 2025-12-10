@@ -1,0 +1,184 @@
+data:
+  bbox_margin: 20
+  colormode: RGB
+  inference:
+    normalize_images: true
+    auto_padding:
+      pad_width_divisor: 32
+      pad_height_divisor: 32
+  train:
+    affine:
+      p: 0.5
+      rotation: 30
+      scaling:
+      - 0.5
+      - 1.25
+      translation: 0
+    crop_sampling:
+      width: 448
+      height: 448
+      max_shift: 0.1
+      method: hybrid
+    gaussian_noise: 12.75
+    motion_blur: true
+    normalize_images: true
+    auto_padding:
+      pad_width_divisor: 32
+      pad_height_divisor: 32
+device: cuda
+metadata:
+  project_path: C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06
+  pose_config_path: 
+    C:\Users\micha\Desktop\MEGALab-Michael-2025-12-06\dlc-models-pytorch\iteration-0\MEGALabDec6-trainset95shuffle5\train\pytorch_config.yaml
+  bodyparts:
+  - head
+  - torso
+  - tail
+  unique_bodyparts: []
+  individuals:
+  - fish1
+  - fish2
+  - fish3
+  - fish4
+  - fish5
+  - fish6
+  - fish7
+  - fish8
+  - fish9
+  - fish10
+  - fish11
+  - fish12
+  - fish13
+  - fish14
+  - fish15
+  - fish16
+  - fish17
+  - fish18
+  - fish19
+  - fish20
+  - fish21
+  - fish22
+  - fish23
+  - fish24
+  - fish25
+  - fish26
+  - fish27
+  - fish28
+  - fish29
+  - fish30
+  with_identity: false
+method: bu
+model:
+  backbone:
+    type: HRNet
+    model_name: hrnet_w18
+    freeze_bn_stats: true
+    freeze_bn_weights: false
+    interpolate_branches: false
+    increased_channel_count: false
+    pretrained: false
+  backbone_output_channels: 18
+  heads:
+    bodypart:
+      type: DLCRNetHead
+      predictor:
+        type: PartAffinityFieldPredictor
+        num_animals: 30
+        num_multibodyparts: 3
+        num_uniquebodyparts: 0
+        nms_radius: 5
+        sigma: 1.0
+        locref_stdev: 7.2801
+        min_affinity: 0.05
+        graph: &id001
+        - - 0
+          - 1
+        - - 0
+          - 2
+        - - 1
+          - 2
+        edges_to_keep:
+        - 0
+        - 2
+        - 1
+        apply_sigmoid: true
+        clip_scores: false
+      target_generator:
+        type: SequentialGenerator
+        generators:
+        - type: HeatmapPlateauGenerator
+          num_heatmaps: 3
+          pos_dist_thresh: 17
+          heatmap_mode: KEYPOINT
+          gradient_masking: false
+          generate_locref: true
+          locref_std: 7.2801
+        - type: PartAffinityFieldGenerator
+          graph: *id001
+          width: 20
+      criterion:
+        heatmap:
+          type: WeightedBCECriterion
+          weight: 1.0
+        locref:
+          type: WeightedHuberCriterion
+          weight: 0.05
+        paf:
+          type: WeightedHuberCriterion
+          weight: 0.1
+      heatmap_config:
+        channels:
+        - 18
+        - 3
+        kernel_size:
+        - 3
+        strides:
+        - 2
+      locref_config:
+        channels:
+        - 18
+        - 6
+        kernel_size:
+        - 3
+        strides:
+        - 2
+      paf_config:
+        channels:
+        - 18
+        - 6
+        kernel_size:
+        - 3
+        strides:
+        - 2
+      num_stages: 5
+net_type: hrnet_w18
+runner:
+  type: PoseTrainingRunner
+  gpus:
+  key_metric: test.mAP
+  key_metric_asc: true
+  eval_interval: 10
+  optimizer:
+    type: AdamW
+    params:
+      lr: 0.0001
+  scheduler:
+    type: LRListScheduler
+    params:
+      lr_list:
+      - - 1e-05
+      - - 1e-06
+      milestones:
+      - 160
+      - 190
+  snapshots:
+    max_snapshots: 5
+    save_epochs: 25
+    save_optimizer_state: false
+train_settings:
+  batch_size: 8
+  dataloader_workers: 0
+  dataloader_pin_memory: false
+  display_iters: 500
+  epochs: 200
+  seed: 42
